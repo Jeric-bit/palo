@@ -118,26 +118,38 @@
         <div class="transition-flash"></div>
     </div>
 
-    <!-- Navigation -->
+    <!-- Navigation - Premium Header -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">JE</a>
+            <a href="#" class="nav-logo">
+                <span class="logo-text">JE</span>
+                <span class="logo-dot"></span>
+                <span class="logo-glow"></span>
+            </a>
             <div class="nav-menu">
-                <a href="#landing" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#landing" class="nav-link active"><span>Home</span></a>
+                <a href="#about" class="nav-link"><span>About</span></a>
+                <a href="#skills" class="nav-link"><span>Skills</span></a>
+                <a href="#projects" class="nav-link"><span>Projects</span></a>
+                <a href="#contact" class="nav-link"><span>Contact</span></a>
             </div>
-            <button class="theme-toggle" aria-label="Toggle theme">
-                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
-                </svg>
-                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-            </button>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="#contact" class="nav-cta">
+                    <span>Let's Talk</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -162,9 +174,37 @@
              LANDING HERO - First Screen (Universe Class)
              ================================================ -->
         <section id="landing" class="landing-hero">
-            <!-- Background matching hero section -->
+            <!-- Enhanced Background -->
             <div class="landing-bg">
                 <div class="landing-grid"></div>
+                <div class="landing-gradient"></div>
+                <div class="landing-noise"></div>
+            </div>
+            
+            <!-- Floating Orbs -->
+            <div class="landing-orbs">
+                <div class="landing-orb orb-1"></div>
+                <div class="landing-orb orb-2"></div>
+                <div class="landing-orb orb-3"></div>
+            </div>
+            
+            <!-- Animated Lines -->
+            <div class="landing-lines">
+                <div class="l-line l-line-1"></div>
+                <div class="l-line l-line-2"></div>
+                <div class="l-line l-line-3"></div>
+            </div>
+            
+            <!-- Particle Field -->
+            <div class="landing-particles">
+                <span class="l-particle"></span>
+                <span class="l-particle"></span>
+                <span class="l-particle"></span>
+                <span class="l-particle"></span>
+                <span class="l-particle"></span>
+                <span class="l-particle"></span>
+                <span class="l-particle"></span>
+                <span class="l-particle"></span>
             </div>
                 
                 <!-- Central Content -->
@@ -220,21 +260,13 @@
             
             <div class="landing-side-right">
                 <div class="side-line"></div>
-                <span class="side-text">SCROLL DOWN</span>
                 <div class="side-line"></div>
             </div>
             
-            <!-- Bottom Scroll Indicator -->
-            <div class="landing-scroll">
-                <div class="scroll-mouse">
-                    <div class="scroll-wheel"></div>
-                </div>
-                <div class="scroll-arrows">
-                    <span class="scroll-arrow"></span>
-                    <span class="scroll-arrow"></span>
-                    <span class="scroll-arrow"></span>
-                </div>
-            </div>
+
+            
+            <!-- Magnetic Cursor Glow -->
+            <div class="landing-cursor-glow"></div>
             
             <!-- Corner Frames -->
             <div class="landing-frame frame-tl"></div>
@@ -298,21 +330,11 @@
                         <span class="btn-border"></span>
                     </a>
                 </div>
-                <div class="hero-scroll">
-                    <div class="scroll-indicator">
-                        <div class="scroll-line"></div>
-                    </div>
-                    <span class="scroll-text">Scroll Down</span>
-                </div>
             </div>
             <div class="hero-image reveal">
                 <div class="image-frame">
-                    <div class="image-placeholder">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </div>
+                    <img src="https://i.imgur.com/ZQxrZGM.jpeg" alt="Jeric Estenon" class="profile-image profile-image-dark">
+                    <img src="https://i.imgur.com/CpL0kKL.jpeg" alt="Jeric Estenon" class="profile-image profile-image-light">
                 </div>
                 <div class="floating-shapes">
                     <div class="shape shape-1"></div>
@@ -365,7 +387,7 @@
                     <div class="about-intro">
                         <h2 class="about-title reveal">
                             <span class="title-line">About</span>
-                            <span class="title-line title-outline">Me</span>
+                            <span class="title-line title-outline" data-text="Me">Me</span>
                         </h2>
                         <p class="about-description reveal">
                             I craft digital experiences that inspire and connect with people. 
@@ -388,7 +410,7 @@
                             <span class="philosophy-label">Introduction</span>
                             <h3 class="philosophy-title">Crafting Digital Excellence</h3>
                             <p class="philosophy-text">
-                                A passionate developer and designer based in San Francisco. 
+                                A passionate student developer and designer based in Philippines. 
                                 I specialize in creating beautiful, functional, and user-centered 
                                 digital experiences with a focus on clean code and thoughtful design.
                             </p>
@@ -452,34 +474,20 @@
                                     <div class="timeline-line"></div>
                                 </div>
                                 <div class="credential-year">
-                                    <span class="year-start">2018</span>
+                                    <span class="year-start">2024</span>
                                     <span class="year-dash">—</span>
-                                    <span class="year-end">2022</span>
+                                    <span class="year-end">2028</span>
                                 </div>
                                 <div class="credential-content">
-                                    <div class="credential-badge">Bachelor's Degree</div>
-                                    <h4 class="credential-degree">Computer Science</h4>
+                                    <div class="credential-badge">Undergraduate</div>
+                                    <h4 class="credential-degree">Information Technology</h4>
                                     <p class="credential-institution">
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                             <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                             <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                                         </svg>
-                                        Stanford University
+                                        Our Lady of Fatima University
                                     </p>
-                                    <div class="credential-details">
-                                        <span class="detail-tag">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M5 13l4 4L19 7"/>
-                                            </svg>
-                                            Honors Graduate
-                                        </span>
-                                        <span class="detail-tag">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
-                                            </svg>
-                                            GPA: 3.9/4.0
-                                        </span>
-                                    </div>
                                 </div>
                                 <div class="credential-glow"></div>
                             </div>
@@ -492,32 +500,18 @@
                                 <div class="credential-year">
                                     <span class="year-start">2022</span>
                                     <span class="year-dash">—</span>
-                                    <span class="year-end">2023</span>
+                                    <span class="year-end">2024</span>
                                 </div>
                                 <div class="credential-content">
-                                    <div class="credential-badge">Master's Degree</div>
-                                    <h4 class="credential-degree">Digital Design</h4>
+                                    <div class="credential-badge">Senior High School Graduate</div>
+                                    <h4 class="credential-degree">STEM Strand</h4>
                                     <p class="credential-institution">
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                             <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                             <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                                         </svg>
-                                        Rhode Island School of Design
+                                        Our Lady of Fatima University
                                     </p>
-                                    <div class="credential-details">
-                                        <span class="detail-tag">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                            </svg>
-                                            Thesis Published
-                                        </span>
-                                        <span class="detail-tag">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                            </svg>
-                                            Human-Centered Design
-                                        </span>
-                                    </div>
                                 </div>
                                 <div class="credential-glow"></div>
                             </div>
@@ -547,10 +541,10 @@
                                 </div>
                                 <div class="cert-content">
                                     <div class="cert-header">
-                                        <h4 class="cert-title">AWS Solutions Architect</h4>
-                                        <span class="cert-badge">Professional</span>
+                                        <h4 class="cert-title">Best Team Leader in Web Development 1</h4>
+                                        <span class="cert-badge">Award</span>
                                     </div>
-                                    <p class="cert-issuer">Amazon Web Services</p>
+                                    <p class="cert-issuer">Our Lady of Fatima</p>
                                     <div class="cert-footer">
                                         <span class="cert-year">
                                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -584,10 +578,10 @@
                                 </div>
                                 <div class="cert-content">
                                     <div class="cert-header">
-                                        <h4 class="cert-title">Google UX Design</h4>
-                                        <span class="cert-badge">Professional</span>
+                                        <h4 class="cert-title">Best Website ATHLIX E-Commerce Sports & Fitness</h4>
+                                        <span class="cert-badge">Award</span>
                                     </div>
-                                    <p class="cert-issuer">Google</p>
+                                    <p class="cert-issuer">Our Lady of Fatima</p>
                                     <div class="cert-footer">
                                         <span class="cert-year">
                                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -596,7 +590,7 @@
                                                 <line x1="8" y1="2" x2="8" y2="6"/>
                                                 <line x1="3" y1="10" x2="21" y2="10"/>
                                             </svg>
-                                            2023
+                                            2024
                                         </span>
                                         <span class="cert-status">
                                             <span class="status-dot"></span>
@@ -621,47 +615,10 @@
                                 </div>
                                 <div class="cert-content">
                                     <div class="cert-header">
-                                        <h4 class="cert-title">Meta Front-End Developer</h4>
-                                        <span class="cert-badge">Professional</span>
+                                        <h4 class="cert-title">Best Team Leader Web Dev 2</h4>
+                                        <span class="cert-badge">Award</span>
                                     </div>
-                                    <p class="cert-issuer">Meta</p>
-                                    <div class="cert-footer">
-                                        <span class="cert-year">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                                <line x1="16" y1="2" x2="16" y2="6"/>
-                                                <line x1="8" y1="2" x2="8" y2="6"/>
-                                                <line x1="3" y1="10" x2="21" y2="10"/>
-                                            </svg>
-                                            2023
-                                        </span>
-                                        <span class="cert-status">
-                                            <span class="status-dot"></span>
-                                            Active
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="cert-arrow">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            
-                            <div class="certification-card reveal" data-status="active">
-                                <div class="cert-shine"></div>
-                                <div class="cert-border"></div>
-                                <div class="cert-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                        <path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
-                                    </svg>
-                                </div>
-                                <div class="cert-content">
-                                    <div class="cert-header">
-                                        <h4 class="cert-title">Figma Professional</h4>
-                                        <span class="cert-badge">Certified</span>
-                                    </div>
-                                    <p class="cert-issuer">Figma</p>
+                                    <p class="cert-issuer">Our Lady of Fatima</p>
                                     <div class="cert-footer">
                                         <span class="cert-year">
                                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -812,12 +769,12 @@
                                 <span class="category-count">4 Skills</span>
                             </div>
                             <div class="category-level">
-                                <span class="level-text">Expert</span>
+                                <span class="level-text">Advanced</span>
                                 <div class="level-indicator">
                                     <span class="level-dot active"></span>
                                     <span class="level-dot active"></span>
                                     <span class="level-dot active"></span>
-                                    <span class="level-dot active"></span>
+                                    <span class="level-dot"></span>
                                 </div>
                             </div>
                         </div>
@@ -920,11 +877,45 @@
                             <div class="skill-card">
                                 <div class="skill-icon">
                                     <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"/>
+                                        <path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-3.26 14.879l-.523 2.686h-1.914l1.456-7.456h2.562c1.073 0 1.842.183 2.305.55.463.367.693.912.693 1.637 0 .144-.011.288-.032.432-.237 1.217-.662 2.078-1.276 2.584-.614.505-1.513.758-2.697.758h-.574zm9.26.858h-1.914l-.374 1.9h-1.914l1.456-7.456h5.384l-.352 1.807h-3.47l-.229 1.176h2.898l-.354 1.807H18.0z"/>
                                     </svg>
                                 </div>
                                 <div class="skill-content">
-                                    <h4 class="skill-name">Node.js</h4>
+                                    <h4 class="skill-name">PHP</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="88">
+                                            <span class="progress-glow"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M0 12C0 5.373 5.373 0 12 0c4.873 0 9.067 2.904 10.947 7.077l-15.87 15.87C2.904 21.067 0 16.873 0 12zM12.265 4.005L12 4.002l-.265.003c-1.457.027-2.836.266-4.095.728l9.459 9.459c.462-1.259.701-2.638.728-4.095l.003-.265-.003-.265c-.027-1.457-.266-2.836-.728-4.095zM12 24c4.873 0 9.067-2.904 10.947-7.077l-15.87-15.87C2.904 2.933 5.798 5.796 8.923 7.077l15.87 15.87C21.067 21.096 16.873 24 12 24z"/>
+                                    </svg>
+                                </div>
+                                <div class="skill-content">
+                                    <h4 class="skill-name">MySQL</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="90">
+                                            <span class="progress-glow"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/>
+                                    </svg>
+                                </div>
+                                <div class="skill-content">
+                                    <h4 class="skill-name">Python</h4>
                                     <div class="skill-bar">
                                         <div class="skill-progress" data-progress="85">
                                             <span class="progress-glow"></span>
@@ -937,52 +928,18 @@
                             <div class="skill-card">
                                 <div class="skill-icon">
                                     <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/>
+                                        <path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639"/>
                                     </svg>
                                 </div>
                                 <div class="skill-content">
-                                    <h4 class="skill-name">Python</h4>
+                                    <h4 class="skill-name">Java</h4>
                                     <div class="skill-bar">
-                                        <div class="skill-progress" data-progress="80">
+                                        <div class="skill-progress" data-progress="82">
                                             <span class="progress-glow"></span>
                                         </div>
                                     </div>
                                 </div>
-                                <span class="skill-percent">80%</span>
-                            </div>
-                            
-                            <div class="skill-card">
-                                <div class="skill-icon">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z"/>
-                                    </svg>
-                                </div>
-                                <div class="skill-content">
-                                    <h4 class="skill-name">MongoDB</h4>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-progress="78">
-                                            <span class="progress-glow"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <span class="skill-percent">78%</span>
-                            </div>
-                            
-                            <div class="skill-card">
-                                <div class="skill-icon">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M23.5594 14.7228a.5269.5269 0 0 0-.0563-.1191c-.139-.2632-.47-.3961-.9439-.3765-1.0029.0413-2.4896.2382-3.4754.3397-1.7695-2.2099-4.0617-4.7943-6.5332-7.6721l-.0563-.065a4.6894 4.6894 0 0 0-.6646-.7282c-.2255-.2054-.509-.4284-.8535-.4284H10.9a.5649.5649 0 0 0-.3848.1318c-.1824.1502-.2531.3805-.1915.6223l.3022 1.2284c.0797.3243.1716.6657.2617.997.0823.3034.1622.5983.2329.8629L3.4433 11.3921c-.1527.0256-.3002.0605-.4403.1052a2.2665 2.2665 0 0 0-.7679.4074 1.4552 1.4552 0 0 0-.2478.23c-.2233.2797-.3087.6897-.2466 1.1702.0996.7702.5604 1.6604 1.2157 2.353.6554.6925 1.4986 1.2268 2.2665 1.4348.3276.0889.6456.1362.9516.1362.2861 0 .5628-.0375.8234-.1122.2599-.0745.5033-.1841.7209-.3249.4007-.2589.7157-.6055.9291-1.025a2.1564 2.1564 0 0 0 .1885-.4254.5584.5584 0 0 0 .0154-.0356l3.4264-9.554c2.2343 2.8317 4.6613 5.8281 6.5181 8.0015-.2039.1259-.413.2486-.6216.3685-.7552.4332-1.4789.8388-2.0536 1.2161-.3947.259-.7196.5046-.9496.7291-.2261.2209-.3924.4426-.4817.6739-.0857.2221-.0996.4622-.0405.6967.0621.2468.1982.4773.3952.6685.1988.1929.4559.3501.7476.4573.592.2166 1.3269.2791 2.1308.1809 1.0268-.1253 2.1519-.4724 3.2665-1.0078 1.1167-.5367 2.2267-1.262 3.2193-2.104.9885-.8383 1.8624-1.7944 2.5347-2.7727.6725-.9783 1.1471-2.0062 1.3738-2.9967.1209-.5271.1744-1.0363.1592-1.5189a3.5076 3.5076 0 0 0-.0592-.5327.5298.5298 0 0 0-.0198-.1008z"/>
-                                    </svg>
-                                </div>
-                                <div class="skill-content">
-                                    <h4 class="skill-name">PostgreSQL</h4>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-progress="75">
-                                            <span class="progress-glow"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <span class="skill-percent">75%</span>
+                                <span class="skill-percent">82%</span>
                             </div>
                         </div>
                     </div>
@@ -1000,17 +957,51 @@
                                 <span class="category-count">4 Skills</span>
                             </div>
                             <div class="category-level">
-                                <span class="level-text">Expert</span>
+                                <span class="level-text">Advanced</span>
                                 <div class="level-indicator">
                                     <span class="level-dot active"></span>
                                     <span class="level-dot active"></span>
                                     <span class="level-dot active"></span>
-                                    <span class="level-dot active"></span>
+                                    <span class="level-dot"></span>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="category-skills">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7.425 16.275h1.95l.975-3.075 1.65-5.4 1.575 5.4.975 3.075h1.95l3.75-10.05h-1.95l-2.625 7.35-1.575-5.1-.9-2.25h-1.8l-.9 2.25-1.575 5.1-2.625-7.35H3.675L7.425 16.275zm15.45-1.8c0 .525-.15.937-.45 1.238-.3.3-.712.45-1.237.45h-.075c-1.125-.025-2.7-.45-4.95-1.35l-.75 1.575c2.55 1.05 4.575 1.575 6 1.575h.15c.9 0 1.663-.313 2.288-.938.625-.625.937-1.387.937-2.287V4.5H21.9v10.425l-1.65 1.65 1.65 1.65v-1.65-.9zm-9.263-2.7c.9-1.2 1.35-2.75 1.35-4.65 0-1.35-.3-2.55-.9-3.6s-1.45-1.838-2.55-2.363c-1.1-.524-2.325-.787-3.675-.787H4.65V12.6H0v1.8h3.45v1.05h2.4c.825 0 1.613-.138 2.363-.413.749-.275 1.4-.675 1.949-1.2.55-.525.975-1.162 1.275-1.912.3-.75.45-1.588.45-2.512 0-1.425-.412-2.588-1.237-3.488C9.825 5.025 8.7 4.575 7.275 4.575H6.225v5.85H4.65v-6.9h2.025c1.5 0 2.813.45 3.938 1.35 1.125.9 1.687 2.213 1.687 3.937 0 1.475-.338 2.725-1.012 3.75-.675 1.025-1.65 1.688-2.925 1.988-.525.125-1.087.187-1.687.187H4.65v1.8h2.4c1.725 0 3.188-.525 4.388-1.575l.825 1.575c-1.425 1.2-3.225 1.8-5.4 1.8H3.675V12.525H1.8v5.4h3.6c2.7 0 5.025-.825 6.95-2.475.875-.762 1.587-1.65 2.138-2.662zm-7.5-6.15h.075c1.05 0 1.938.338 2.662 1.013.725.675 1.088 1.562 1.088 2.662s-.363 1.988-1.088 2.663c-.724.675-1.612 1.012-2.662 1.012H6.113V5.625z"/>
+                                    </svg>
+                                </div>
+                                <div class="skill-content">
+                                    <h4 class="skill-name">Canva</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="90">
+                                            <span class="progress-glow"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M9.85 8.42c-.37-.15-.77-.21-1.18-.2-.26 0-.49 0-.68.01l-.72.01v3.47l.83.02c.3.01.62-.02.9-.09.37-.09.7-.28.93-.57.28-.35.42-.81.4-1.27.02-.43-.11-.86-.37-1.21a1.764 1.764 0 0 0-.11-.17zm13.16-3.66c-1.11-1.11-2.42-1.98-3.87-2.56-1.5-.6-3.1-.9-4.7-.89C12.04.89 9.75 1.61 7.85 2.98 5.96 4.35 4.55 6.3 3.82 8.52a11.172 11.172 0 0 0-.11 7.15c.58 1.74 1.61 3.3 2.98 4.52 1.46 1.3 3.23 2.2 5.16 2.62 2.17.47 4.42.36 6.53-.32 1.91-.62 3.63-1.72 5.01-3.2 1.34-1.43 2.3-3.18 2.79-5.09.53-2.08.5-4.26-.08-6.33-.53-1.89-1.5-3.62-2.83-5.04a11.43 11.43 0 0 0-.27-.27zM6.43 15.5l.01-7.37c.53-.07 1.07-.11 1.61-.11.65-.02 1.3.05 1.93.21.56.14 1.09.4 1.54.76.42.33.76.75.98 1.24.24.52.35 1.11.33 1.69.02.68-.13 1.36-.45 1.96-.29.55-.71 1.02-1.21 1.38-.51.37-1.09.63-1.7.79-.65.18-1.32.25-1.99.24-.39.01-.79-.01-1.19-.05l-1.86-.04v-.7zm6.74.05h-.99v-.74l3.06-5.36H14.1v-.75h3.28v.74l-3.01 5.36h3.13v.75H13.17zm4.89 0h-.95v-6.85h.95v6.85z"/>
+                                    </svg>
+                                </div>
+                                <div class="skill-content">
+                                    <h4 class="skill-name">Adobe Photoshop</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="88">
+                                            <span class="progress-glow"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            
                             <div class="skill-card">
                                 <div class="skill-icon">
                                     <svg viewBox="0 0 24 24" fill="currentColor">
@@ -1026,40 +1017,6 @@
                                     </div>
                                 </div>
                                 <span class="skill-percent">92%</span>
-                            </div>
-                            
-                            <div class="skill-card">
-                                <div class="skill-icon">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M4.25 2A2.25 2.25 0 0 0 2 4.25v15.5A2.25 2.25 0 0 0 4.25 22h15.5A2.25 2.25 0 0 0 22 19.75V4.25A2.25 2.25 0 0 0 19.75 2zm1.063 3.5h1.083l3.042 5.1 3.042-5.1h1.082L10.25 11.25 13.75 17h-1.084l-3.291-5.521L6.083 17H5L8.5 11.25zm10.937 0h1.5v6h-1.5zm.75 7.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z"/>
-                                    </svg>
-                                </div>
-                                <div class="skill-content">
-                                    <h4 class="skill-name">Adobe XD</h4>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-progress="85">
-                                            <span class="progress-glow"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <span class="skill-percent">85%</span>
-                            </div>
-                            
-                            <div class="skill-card">
-                                <div class="skill-icon">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M9.85 8.42c-.37-.15-.77-.21-1.18-.2-.26 0-.49 0-.68.01l-.72.01v3.47l.83.02c.3.01.62-.02.9-.09.37-.09.7-.28.93-.57.28-.35.42-.81.4-1.27.02-.43-.11-.86-.37-1.21a1.764 1.764 0 0 0-.11-.17zm13.16-3.66c-1.11-1.11-2.42-1.98-3.87-2.56-1.5-.6-3.1-.9-4.7-.89C12.04.89 9.75 1.61 7.85 2.98 5.96 4.35 4.55 6.3 3.82 8.52a11.172 11.172 0 0 0-.11 7.15c.58 1.74 1.61 3.3 2.98 4.52 1.46 1.3 3.23 2.2 5.16 2.62 2.17.47 4.42.36 6.53-.32 1.91-.62 3.63-1.72 5.01-3.2 1.34-1.43 2.3-3.18 2.79-5.09.53-2.08.5-4.26-.08-6.33-.53-1.89-1.5-3.62-2.83-5.04a11.43 11.43 0 0 0-.27-.27zM6.43 15.5l.01-7.37c.53-.07 1.07-.11 1.61-.11.65-.02 1.3.05 1.93.21.56.14 1.09.4 1.54.76.42.33.76.75.98 1.24.24.52.35 1.11.33 1.69.02.68-.13 1.36-.45 1.96-.29.55-.71 1.02-1.21 1.38-.51.37-1.09.63-1.7.79-.65.18-1.32.25-1.99.24-.39.01-.79-.01-1.19-.05l-1.86-.04v-.7zm6.74.05h-.99v-.74l3.06-5.36H14.1v-.75h3.28v.74l-3.01 5.36h3.13v.75H13.17zm4.89 0h-.95v-6.85h.95v6.85z"/>
-                                    </svg>
-                                </div>
-                                <div class="skill-content">
-                                    <h4 class="skill-name">Photoshop</h4>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-progress="80">
-                                            <span class="progress-glow"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <span class="skill-percent">80%</span>
                             </div>
                             
                             <div class="skill-card">
@@ -1139,14 +1096,9 @@
                     <span class="section-subtitle reveal">My Work</span>
                     <h2 class="section-title reveal">Featured Projects<span class="accent">.</span></h2>
                 </div>
-                <div class="projects-filter reveal">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="web">Web Design</button>
-                    <button class="filter-btn" data-filter="app">Applications</button>
-                    <button class="filter-btn" data-filter="brand">Branding</button>
-                </div>
-                <div class="projects-grid">
-                    <div class="project-card reveal" data-category="web">
+                <div class="projects-grid three-projects">
+                    <!-- Project 1 -->
+                    <div class="project-card reveal" data-category="web" data-hover-image="https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop">
                         <div class="project-image">
                             <div class="project-placeholder">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
@@ -1171,17 +1123,20 @@
                             </div>
                         </div>
                         <div class="project-info">
-                            <span class="project-category">Web Design</span>
+                            <span class="project-category">Web Development</span>
                             <h3 class="project-title">E-Commerce Platform</h3>
-                            <p class="project-description">A modern e-commerce solution with seamless UX</p>
+                            <p class="project-description">Full-featured online shopping platform with modern design</p>
                             <div class="project-tech">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>MongoDB</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>Next.js</span>
                             </div>
                         </div>
                     </div>
-                    <div class="project-card reveal" data-category="app">
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card reveal" data-category="app" data-hover-image="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=400&h=300&fit=crop">
                         <div class="project-image">
                             <div class="project-placeholder">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
@@ -1205,16 +1160,23 @@
                             </div>
                         </div>
                         <div class="project-info">
-                            <span class="project-category">Application</span>
-                            <h3 class="project-title">Fitness Tracker App</h3>
-                            <p class="project-description">Mobile app for tracking workouts and nutrition</p>
+                            <span class="project-category">Web Application</span>
+                            <h3 class="project-title">Quiz Platform</h3>
+                            <p class="project-description">Interactive quiz system with real-time scoring and analytics</p>
                             <div class="project-tech">
-                                <span>React Native</span>
-                                <span>Firebase</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>Figma</span>
+                                <span>Canva</span>
                             </div>
                         </div>
                     </div>
-                    <div class="project-card reveal" data-category="brand">
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card reveal" data-category="brand" data-hover-image="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400&h=300&fit=crop">
                         <div class="project-image">
                             <div class="project-placeholder">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
@@ -1239,113 +1201,17 @@
                             </div>
                         </div>
                         <div class="project-info">
-                            <span class="project-category">Branding</span>
-                            <h3 class="project-title">Tech Startup Identity</h3>
-                            <p class="project-description">Complete brand identity for a tech company</p>
+                            <span class="project-category">Finance App</span>
+                            <h3 class="project-title">Finance Tracker</h3>
+                            <p class="project-description">Personal finance management system with expense tracking</p>
                             <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
                                 <span>Figma</span>
-                                <span>Illustrator</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card reveal" data-category="web">
-                        <div class="project-image">
-                            <div class="project-placeholder">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                                </svg>
-                            </div>
-                            <div class="project-overlay">
-                                <a href="#" class="project-link" aria-label="View Project">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                </a>
-                                <a href="#" class="project-link" aria-label="View Code">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <span class="project-category">Web Design</span>
-                            <h3 class="project-title">SaaS Dashboard</h3>
-                            <p class="project-description">Analytics dashboard for business intelligence</p>
-                            <div class="project-tech">
-                                <span>Vue.js</span>
-                                <span>D3.js</span>
-                                <span>Node.js</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card reveal" data-category="app">
-                        <div class="project-image">
-                            <div class="project-placeholder">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                                </svg>
-                            </div>
-                            <div class="project-overlay">
-                                <a href="#" class="project-link" aria-label="View Project">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                </a>
-                                <a href="#" class="project-link" aria-label="View Code">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <span class="project-category">Application</span>
-                            <h3 class="project-title">Streaming Platform</h3>
-                            <p class="project-description">Video streaming service with social features</p>
-                            <div class="project-tech">
-                                <span>Next.js</span>
-                                <span>AWS</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card reveal" data-category="brand">
-                        <div class="project-image">
-                            <div class="project-placeholder">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-                                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-                                    <path d="M2 2l7.586 7.586"></path>
-                                    <circle cx="11" cy="11" r="2"></circle>
-                                </svg>
-                            </div>
-                            <div class="project-overlay">
-                                <a href="#" class="project-link" aria-label="View Project">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                </a>
-                                <a href="#" class="project-link" aria-label="View Code">
-                                    <svg viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <span class="project-category">Branding</span>
-                            <h3 class="project-title">Creative Agency Site</h3>
-                            <p class="project-description">Website and branding for creative agency</p>
-                            <div class="project-tech">
-                                <span>Figma</span>
-                                <span>Webflow</span>
+                                <span>Canva</span>
                             </div>
                         </div>
                     </div>
@@ -1353,20 +1219,37 @@
             </div>
         </section>
 
+        <!-- Cursor Follow Image for Project Hover -->
+        <div class="cursor-image" id="cursorImage">
+            <img src="" alt="Project preview">
+        </div>
+
         <!-- Contact Section -->
         <section id="contact" class="contact section">
             <div class="container">
                 <div class="section-header">
                     <span class="section-subtitle reveal">Get In Touch</span>
-                    <h2 class="section-title reveal">Contact Me<span class="accent">.</span></h2>
+                    <h2 class="section-title reveal">Let's Work Together<span class="accent">.</span></h2>
+                    <p class="section-description reveal">
+                        Have a project in mind or just want to connect? I'm always excited to collaborate 
+                        on interesting projects and bring creative ideas to life.
+                    </p>
                 </div>
                 <div class="contact-content">
                     <div class="contact-info reveal">
-                        <p class="contact-text">
-                            I'm currently available for freelance work and open to discussing 
-                            new opportunities. Whether you have a project in mind or just want 
-                            to chat, feel free to reach out!
-                        </p>
+                        <div class="contact-intro">
+                            <h3 class="contact-heading">Let's Create Something Amazing</h3>
+                            <p class="contact-text">
+                                I'm currently available for freelance opportunities and excited to discuss 
+                                new projects. Whether you need a full-stack developer, a creative designer, 
+                                or someone who can bring your vision to life - let's connect!
+                            </p>
+                        </div>
+                        
+                        <div class="availability-badge">
+                            <span class="availability-dot"></span>
+                            <span class="availability-text">Available for new projects</span>
+                        </div>
                         <div class="contact-details">
                             <div class="contact-item">
                                 <div class="contact-icon">
@@ -1377,7 +1260,8 @@
                                 </div>
                                 <div>
                                     <h4>Email</h4>
-                                    <a href="mailto:hello@johndoe.com">hello@johndoe.com</a>
+                                    <a href="mailto:jeric.estenon@example.com">jeric.estenon@example.com</a>
+                                    <span class="contact-meta">Response within 24 hours</span>
                                 </div>
                             </div>
                             <div class="contact-item">
@@ -1389,7 +1273,8 @@
                                 </div>
                                 <div>
                                     <h4>Location</h4>
-                                    <p>San Francisco, CA</p>
+                                    <p>Philippines</p>
+                                    <span class="contact-meta">Open to remote work worldwide</span>
                                 </div>
                             </div>
                             <div class="contact-item">
@@ -1400,7 +1285,8 @@
                                 </div>
                                 <div>
                                     <h4>Phone</h4>
-                                    <a href="tel:+14155551234">+1 (415) 555-1234</a>
+                                    <a href="tel:+639123456789">+63 912 345 6789</a>
+                                    <span class="contact-meta">Mon-Fri, 9AM-6PM PHT</span>
                                 </div>
                             </div>
                         </div>
@@ -1457,23 +1343,123 @@
                         </button>
                     </form>
                 </div>
+                
+                <!-- Why Work With Me Section -->
+                <div class="contact-benefits reveal">
+                    <h3 class="benefits-title">Why Work With Me</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <h4>Fast Response</h4>
+                            <p>Quick turnaround within 24 hours</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                            <h4>Quality Work</h4>
+                            <p>Attention to detail in every project</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <h4>Collaborative</h4>
+                            <p>Open communication throughout</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg>
+                            </div>
+                            <h4>Passionate</h4>
+                            <p>Dedicated to bringing ideas to life</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer - Premium Design -->
     <footer class="footer">
+        <div class="footer-glow"></div>
+        <div class="footer-grid-bg"></div>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">JD</div>
-                <p class="footer-text">Designed & Built with ❤️ by John Doe</p>
-                <p class="footer-copyright">© 2024 All Rights Reserved</p>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-text">JE</span>
+                        <span class="logo-dot"></span>
+                    </a>
+                    <p class="footer-tagline">Creating digital experiences that inspire</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Navigation</h4>
+                        <a href="#landing" class="footer-link">Home</a>
+                        <a href="#about" class="footer-link">About</a>
+                        <a href="#skills" class="footer-link">Skills</a>
+                        <a href="#projects" class="footer-link">Projects</a>
+                        <a href="#contact" class="footer-link">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-heading">Connect</h4>
+                        <a href="#" class="footer-link">GitHub</a>
+                        <a href="#" class="footer-link">LinkedIn</a>
+                        <a href="#" class="footer-link">Twitter</a>
+                        <a href="#" class="footer-link">Dribbble</a>
+                    </div>
+                </div>
+                <div class="footer-cta-section">
+                    <p class="footer-cta-text">Ready to start a project?</p>
+                    <a href="#contact" class="footer-cta-btn">
+                        <span>Get in Touch</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <button class="back-to-top" aria-label="Back to top">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 15l-6-6-6 6"></path>
-                </svg>
-            </button>
+            <div class="footer-divider">
+                <span class="divider-line"></span>
+                <span class="divider-dot"></span>
+                <span class="divider-line"></span>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 Joshua. All rights reserved.</p>
+                <div class="footer-status">
+                    <span class="status-indicator"></span>
+                    <span>Available for work</span>
+                </div>
+                <button class="back-to-top" aria-label="Back to top">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 15l-6-6-6 6"></path>
+                    </svg>
+                    <span class="back-to-top-text">Top</span>
+                </button>
+            </div>
+        </div>
+        <div class="footer-particles">
+            <span class="f-particle"></span>
+            <span class="f-particle"></span>
+            <span class="f-particle"></span>
+            <span class="f-particle"></span>
+            <span class="f-particle"></span>
         </div>
     </footer>
 
