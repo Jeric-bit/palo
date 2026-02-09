@@ -2,6 +2,34 @@
    MONOCHROME PORTFOLIO - JAVASCRIPT
    ===================================================== */
 
+// Performance utilities
+function throttle(func, wait) {
+    let timeout;
+    let lastRan;
+    return function executedFunction(...args) {
+        if (!lastRan) {
+            func.apply(this, args);
+            lastRan = Date.now();
+        } else {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                if ((Date.now() - lastRan) >= wait) {
+                    func.apply(this, args);
+                    lastRan = Date.now();
+                }
+            }, Math.max(wait - (Date.now() - lastRan), 0));
+        }
+    };
+}
+
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     
     // =====================================================
@@ -167,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('loading');
     
     // =====================================================
-    // CUSTOM CURSOR
+    // CUSTOM CURSOR - OPTIMIZED
     // =====================================================
     const cursor = document.querySelector('.cursor');
     const cursorFollower = document.querySelector('.cursor-follower');
@@ -175,28 +203,42 @@ document.addEventListener('DOMContentLoaded', function() {
     let mouseX = 0, mouseY = 0;
     let cursorX = 0, cursorY = 0;
     let followerX = 0, followerY = 0;
+    let isMoving = false;
+    let animationId = null;
+    let idleTimeout = null;
     
     document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
-    });
+        
+        if (!isMoving) {
+            isMoving = true;
+            animationId = requestAnimationFrame(animateCursor);
+        }
+        
+        clearTimeout(idleTimeout);
+        idleTimeout = setTimeout(() => {
+            isMoving = false;
+        }, 100);
+    }, {passive: true});
     
     function animateCursor() {
+        if (!isMoving) return;
+        
         // Cursor follows mouse instantly
         cursorX = mouseX;
         cursorY = mouseY;
-        cursor.style.left = cursorX + 'px';
-        cursor.style.top = cursorY + 'px';
+        cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
         
         // Follower has smooth lag
         followerX += (mouseX - followerX) * 0.1;
         followerY += (mouseY - followerY) * 0.1;
-        cursorFollower.style.left = followerX + 'px';
-        cursorFollower.style.top = followerY + 'px';
+        cursorFollower.style.transform = `translate3d(${followerX}px, ${followerY}px, 0)`;
         
-        requestAnimationFrame(animateCursor);
+        if (isMoving) {
+            animationId = requestAnimationFrame(animateCursor);
+        }
     }
-    animateCursor();
     
     // Cursor hover effects
     const hoverElements = document.querySelectorAll('a, button, .project-card, .about-card, .tech-tag');
@@ -222,8 +264,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.querySelector('.mobile-menu');
     const mobileLinks = document.querySelectorAll('.mobile-link');
     
-    // Navbar scroll effect
-    window.addEventListener('scroll', () => {
+    // Navbar scroll effect - THROTTLED
+    const handleNavScroll = throttle(() => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
@@ -232,7 +274,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update active nav link based on scroll position
         updateActiveNav();
-    });
+    }, 100);
+    
+    window.addEventListener('scroll', handleNavScroll, {passive: true});
     
     function updateActiveNav() {
         const sections = document.querySelectorAll('section[id]');
@@ -325,8 +369,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial check
     setTimeout(revealElements, 100);
     
-    // On scroll
-    window.addEventListener('scroll', () => {
+    // On scroll - THROTTLED
+    const handleRevealScroll = throttle(() => {
         const reveals = document.querySelectorAll('.reveal:not(.revealed)');
         
         reveals.forEach(el => {
@@ -340,7 +384,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Animate skill bars
         animateSkillBars();
-    });
+    }, 100);
+    
+    window.addEventListener('scroll', handleRevealScroll, {passive: true});
     
     // =====================================================
     // SKILL BARS ANIMATION
@@ -455,11 +501,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // =====================================================
-    // PARALLAX EFFECT FOR FLOATING SHAPES
+    // PARALLAX EFFECT FOR FLOATING SHAPES - OPTIMIZED
     // =====================================================
     const shapes = document.querySelectorAll('.shape');
     
-    window.addEventListener('mousemove', (e) => {
+    // Add will-change hint for better performance
+    shapes.forEach(shape => {
+        shape.style.willChange = 'transform';
+    });
+    
+    const handleParallax = throttle((e) => {
         const mouseX = e.clientX / window.innerWidth;
         const mouseY = e.clientY / window.innerHeight;
         
@@ -468,9 +519,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const x = (mouseX - 0.5) * speed;
             const y = (mouseY - 0.5) * speed;
             
-            shape.style.transform = `translate(${x}px, ${y}px)`;
+            shape.style.transform = `translate3d(${x}px, ${y}px, 0)`;
         });
-    });
+    }, 50);
+    
+    window.addEventListener('mousemove', handleParallax, {passive: true});
     
     // =====================================================
     // TYPING EFFECT (OPTIONAL)
@@ -589,64 +642,67 @@ document.addEventListener('DOMContentLoaded', function() {
     const landingLines = document.querySelectorAll('.l-line');
     const landingCursorGlow = document.querySelector('.landing-cursor-glow');
     
-    // Cursor glow tracking for landing page
+    // Cursor glow tracking for landing page - THROTTLED
     if (landingCursorGlow && landingHero) {
-        landingHero.addEventListener('mousemove', (e) => {
-            landingCursorGlow.style.left = e.clientX + 'px';
-            landingCursorGlow.style.top = e.clientY + 'px';
-        });
+        const handleCursorGlow = throttle((e) => {
+            landingCursorGlow.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+        }, 30);
+        landingHero.addEventListener('mousemove', handleCursorGlow, {passive: true});
     }
     
     let scrollActivated = false;
 
-    // Pre-calculate smooth flying directions for each character - ENHANCED dramatic fly-away
+    // Pre-calculate smooth flying directions for each character - OPTIMIZED
     const charDirections = [];
     const totalChars = titleChars.length;
     titleChars.forEach((char, index) => {
-        // Create more varied and dramatic direction patterns
-        const row = Math.floor(index / 8); // Approximate row based on position
-        const posInRow = index % 8;
-        const centerOffset = (posInRow - 4) / 4; // -1 to 1 for position relative to center
+        char.style.willChange = 'transform, opacity'; // GPU acceleration hint
         
-        // Alternate patterns: fly up/down with slight outward spread
+        // Simplified dramatic direction patterns
+        const row = Math.floor(index / 8);
+        const posInRow = index % 8;
+        const centerOffset = (posInRow - 4) / 4;
+        
         const flyUp = (index + row) % 2 === 0;
         const yDirection = flyUp ? -1 : 1;
-        const yDistance = 400 + (Math.random() * 300); // Distance: 400-700px (more dramatic)
+        const yDistance = 300 + (Math.random() * 200); // Reduced distance: 300-500px
         
         charDirections.push({
-            x: centerOffset * 80 + (Math.random() - 0.5) * 60, // Spread outward from center
+            x: centerOffset * 60 + (Math.random() - 0.5) * 40,
             y: yDirection * yDistance,
-            rotation: (Math.random() - 0.5) * 360, // Full rotation range
-            scale: 0.3 + Math.random() * 0.4, // Scale down to 0.3-0.7
-            delay: index * 0.006, // Faster stagger
-            blur: 5 + Math.random() * 10 // Add blur effect
+            rotation: (Math.random() - 0.5) * 180, // Reduced rotation
+            scale: 0.4 + Math.random() * 0.3,
+            delay: index * 0.008,
+            blur: 3 + Math.random() * 5 // Reduced blur for better performance
         });
     });
 
-    // Pre-calculate tagline character directions - enhanced
+    // Pre-calculate tagline character directions - OPTIMIZED
     const taglineDirections = [];
     taglineChars.forEach((char, index) => {
-        const flyUp = index % 3 !== 0; // 2/3 fly up, 1/3 fly down
+        char.style.willChange = 'transform, opacity'; // GPU acceleration hint
+        
+        const flyUp = index % 3 !== 0;
         const yDirection = flyUp ? -1 : 1;
-        const yDistance = 250 + (Math.random() * 200);
+        const yDistance = 200 + (Math.random() * 150); // Reduced distance
         
         taglineDirections.push({
-            x: (index - taglineChars.length/2) * 3 + (Math.random() - 0.5) * 40, // Fan out
+            x: (index - taglineChars.length/2) * 3 + (Math.random() - 0.5) * 30,
             y: yDirection * yDistance,
-            rotation: (Math.random() - 0.5) * 180,
-            scale: 0.4 + Math.random() * 0.3,
-            delay: index * 0.003,
-            blur: 3 + Math.random() * 7
+            rotation: (Math.random() - 0.5) * 120, // Reduced rotation
+            scale: 0.5 + Math.random() * 0.2,
+            delay: index * 0.004,
+            blur: 2 + Math.random() * 4 // Reduced blur
         });
     });
 
-    function handleLandingScroll() {
+    const handleLandingScroll = throttle(function() {
         if (!landingHero) return;
         
         const scrollY = window.scrollY;
         const windowHeight = window.innerHeight;
         const heroHeight = landingHero.offsetHeight;
-        const scrollProgress = Math.min(scrollY / (heroHeight * 0.8), 1); // Longer scroll - 80% of hero height
+        const scrollProgress = Math.min(scrollY / (heroHeight * 0.8), 1);
         
         // Add scroll-active class to disable CSS animations when user starts scrolling
         if (scrollY > 30 && !scrollActivated) {
@@ -733,19 +789,21 @@ document.addEventListener('DOMContentLoaded', function() {
             const staggeredProgress = Math.max(0, Math.min(1, (scrollProgress - dir.delay) * 1.4));
             const charEase = 1 - Math.pow(1 - staggeredProgress, 5); // Smoother quint easing
             
-            // Enhanced translation with scale
+            // Enhanced translation with scale - GPU accelerated
             const x = dir.x * charEase;
             const y = dir.y * charEase;
             const rotation = dir.rotation * charEase;
-            const scale = 1 - ((1 - dir.scale) * charEase); // Scale down
+            const scale = 1 - ((1 - dir.scale) * charEase);
             const blur = dir.blur * charEase;
             
             // Smoother opacity fade
             const opacity = 1 - (staggeredProgress * 1.3);
             
-            char.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg) scale(${scale})`;
+            char.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${rotation}deg) scale(${scale})`;
             char.style.opacity = Math.max(opacity, 0);
-            char.style.filter = `blur(${blur}px)`;
+            if (blur > 1) { // Only apply blur when necessary
+                char.style.filter = `blur(${blur}px)`;
+            }
         });
         
         // Tagline chars - enhanced fly away with slight delay
@@ -763,9 +821,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const blur = dir.blur * eased;
             const opacity = 1 - (eased * 1.3);
             
-            char.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg) scale(${scale})`;
+            char.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${rotation}deg) scale(${scale})`;
             char.style.opacity = Math.max(opacity, 0);
-            char.style.filter = `blur(${blur}px)`;
+            if (blur > 1) { // Only apply blur when necessary
+                char.style.filter = `blur(${blur}px)`;
+            }
         });
         
         // Background elements - subtle parallax
@@ -823,19 +883,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (heroSection) heroSection.classList.remove('reveal-active');
             if (heroImage) heroImage.classList.remove('reveal-active');
         }
-    }
+    }, 16); // 60fps throttle
     
-    // Smooth scroll handler with requestAnimationFrame
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(() => {
-                handleLandingScroll();
-                ticking = false;
-            });
-            ticking = true;
-        }
-    });
+    // Smooth scroll handler with passive listener
+    window.addEventListener('scroll', handleLandingScroll, {passive: true});
     
     // Initial call
     handleLandingScroll();
@@ -1304,8 +1355,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // =====================================================
-    // CURSOR FOLLOW IMAGE FOR PROJECT HOVER - PREMIUM EFFECT
+    // CURSOR FOLLOW IMAGE FOR PROJECT HOVER - DISABLED
     // =====================================================
+    /* Feature disabled - images now display directly in project cards
     const cursorImage = document.getElementById('cursorImage');
     const cursorImageImg = cursorImage ? cursorImage.querySelector('img') : null;
     const hoverProjectCards = document.querySelectorAll('.project-card[data-hover-image]');
@@ -1394,6 +1446,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    */
 
     // =====================================================
     // SCROLL DEPTH INDICATOR
